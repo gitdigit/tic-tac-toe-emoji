@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic tac Toe Emoji</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="form-box">
+		<div class="button-box">
+			<div id="btn"></div>
+			<button type="button" class="toggle-btn" onclick="leftClick()">😁</button>
+			<button type="button" class="toggle-btn" onclick="rightClick()">🤖</button>
+		</div>
+        <div class="box">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+	</div> 
+    <div class="container" style="display: none;">
+        <div class="main-box">
+            <div class="result_emoji">🎊</div>
+            <div id="winningMessage" class="winning-message">
+                <div data-winning-message-text></div>
+            </div>
+            <div class="button-group">
+                <button id="homeBtn">Home</button>
+                <button id="restartBtn">Restart</button>
+            </div>
+        </div>
+    </div>
+	<script src="single.js"></script>
+</body>
+</html>

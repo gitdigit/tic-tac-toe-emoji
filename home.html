@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: pink;
+            height: 100vh;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+        }
+
+        .main-box-home{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            height: 100vh;
+        }
+
+        .emoji-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background-color: white;
+            width: 100px;
+            height: 100px;
+        }
+
+        .emoji-box > div {
+            font-size: 4rem;
+        }
+        .text-home{
+            font-weight: bolder;
+            font-size: 30px;
+            color: rgb(62, 62, 62)
+        }
+        .button-group-home{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            gap: 30px;
+            height: 30px;
+        }
+        #single-home{
+            border: none;
+            border-radius: 5px;
+            font-size: 10px;
+            font-weight: bold;
+            color: rgb(62, 62, 62);
+        }
+        #single-home:hover{
+            cursor: pointer;
+            background-color: rgb(62, 62, 62);
+            transition: all ease-in 0.2s;
+            color: white; 
+        }
+        #multi-home:hover{
+            cursor: pointer;
+            background-color: rgb(62, 62, 62);
+            transition: all ease-in 0.2s;
+            color: white; 
+        }
+        #multi-home{
+            border: none;
+            border-radius: 5px;
+            font-size: 10px;
+            font-weight: bold;
+            color: rgb(62, 62, 62);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-home">
+        <div class="main-box-home">
+            <div class="emoji-box">
+                <div class="result_emoji">🎊</div>
+            </div>
+            <div class="text-home">Tic Tac <em>Toe</em></div>
+            <div class="button-group-home">
+                <button id="single-home">Single Player🧍🏾</button>
+                <button id="multi-home">Multi Player 🤼</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const emojiDiv = document.querySelector('.result_emoji');
+        const emojis = ['❤️','🤠','😁','😊','🤖','🎊','👌','😘','💕','🦥','🎉','🎲','🕹️','🎰','🎯','🥇','🏆','🎮'];
+
+        function randomEmoji(){
+            const randomIndex = Math.floor(Math.random() * emojis.length);
+            return emojis[randomIndex]; 
+        }
+
+        function fillEmoji(){
+            emojiDiv.textContent = randomEmoji();
+        }
+
+        setInterval(fillEmoji, 1000); 
+        document.addEventListener('DOMContentLoaded', () => {
+
+    document.getElementById('single-home').addEventListener('click', () => {
+        window.location.href = 'single.html'; 
+    });
+
+    document.getElementById('multi-home').addEventListener('click', () => {
+        window.location.href = 'multi.html'; 
+    });
+});
+
+    </script>
+</body>
+</html>
