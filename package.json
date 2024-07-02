@@ -1,0 +1,17 @@
+{
+  "name": "tic-tac-toe-emoji",
+  "version": "1.0.0",
+  "description": "Tic Tac Toe Game",
+  "main": "multi.js",
+  "devDependencies": {
+    "vite": "^5.3.2"
+  },
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "keywords": [],
+  "author": "Jennifer",
+  "license": "MIT"
+}
